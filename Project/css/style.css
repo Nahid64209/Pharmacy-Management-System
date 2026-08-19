@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f4f7fa;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+header {
+    width: 84%;
+    background: #0b6e4f;
+    color: white;
+    padding: 18px 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    float: left;
+}
+
+nav {
+    float: right;
+    margin-top: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #ffd54f;
+}
+
+.login-btn {
+    background: #007bff;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+.signup-btn {
+    background: #ff9800;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url("../images/home.jpeg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.hero-content {
+    width: 80%;
+    margin: auto;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.start-btn {
+    background: #0b6e4f;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 70px 10%;
+}
+
+section h2 {
+    text-align: center;
+    color: #0b6e4f;
+    margin-bottom: 25px;
+}
+
+section p {
+    text-align: center;
+    line-height: 1.7;
+}
+
+
+/* FEATURES */
+
+.feature-container {
+    text-align: center;
+}
+
+.card {
+    width: 250px;
+    background: white;
+    padding: 30px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.card span {
+    font-size: 40px;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+
+/* STATS */
+
+.stats {
+    background: #0b6e4f;
+    color: white;
+    text-align: center;
+}
+
+.stat-box {
+    width: 20%;
+    display: inline-block;
+    padding: 30px;
+}
+
+.stat-box h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+/* CONTACT */
+
+#contact {
+    background: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
