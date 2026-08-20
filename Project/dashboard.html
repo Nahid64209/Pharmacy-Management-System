@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Pharmacy Management System</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <span>💊</span>
+        Pharmacy Management System
+    </div>
+
+    <nav class="menu">
+
+        <a href="dashboard.html" class="active">
+            <span>📊</span> Dashboard
+        </a>
+
+        <a href="#">
+            <span>💊</span> Medicines
+        </a>
+
+        <a href="#">
+            <span>📦</span> Inventory
+        </a>
+
+        <a href="#">
+            <span>🛒</span> Sales
+        </a>
+
+        <a href="#">
+            <span>🚚</span> Suppliers
+        </a>
+
+        <a href="#">
+            <span>👥</span> Customers
+        </a>
+
+        <a href="#">
+            <span>📊</span> Reports
+        </a>
+
+        <a href="login.html" class="logout">
+            <span>🚪</span> Logout
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<main class="main">
+
+    <header class="topbar">
+
+        <div>
+            <h1>Dashboard</h1>
+            <p>Welcome to Pharmacy Management System</p>
+        </div>
+
+
+        <a href="admin.html" class="user">
+
+            <span>👤</span>
+
+            <span>Admin</span>
+
+        </a>
+
+    </header>
+
+
+    <section class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">💊</div>
+
+            <div>
+                <h3>Total Medicines</h3>
+                <h2>1,250</h2>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">👥</div>
+
+            <div>
+                <h3>Total Customers</h3>
+                <h2>520</h2>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">🚚</div>
+
+            <div>
+                <h3>Total Suppliers</h3>
+                <h2>105</h2>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">🛒</div>
+
+            <div>
+                <h3>Today's Sales</h3>
+                <h2>৳45,200</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="content-grid">
+
+        <div class="section">
+
+            <div class="section-header">
+
+                <h2>Recent Sales</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+
+            <table>
+
+                <tr>
+                    <th>Invoice</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>#INV001</td>
+                    <td>Rahim</td>
+                    <td>৳2,500</td>
+                    <td>
+                        <span class="status paid">Paid</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>#INV002</td>
+                    <td>Karim</td>
+                    <td>৳1,850</td>
+                    <td>
+                        <span class="status paid">Paid</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>#INV003</td>
+                    <td>Nusrat</td>
+                    <td>৳3,200</td>
+                    <td>
+                        <span class="status paid">Paid</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>#INV004</td>
+                    <td>Sumaiya</td>
+                    <td>৳4,100</td>
+                    <td>
+                        <span class="status pending">Pending</span>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div class="section">
+
+            <div class="section-header">
+
+                <h2>Low Stock</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+
+            <div class="stock-item">
+
+                <span>💊</span>
+
+                <div>
+                    <h4>Napa</h4>
+                    <p>Painkiller</p>
+                </div>
+
+                <b>12</b>
+
+            </div>
+
+
+            <div class="stock-item">
+
+                <span>💊</span>
+
+                <div>
+                    <h4>Seclo</h4>
+                    <p>Gastric</p>
+                </div>
+
+                <b>8</b>
+
+            </div>
+
+
+            <div class="stock-item">
+
+                <span>💊</span>
+
+                <div>
+                    <h4>DP</h4>
+                    <p>Vitamin</p>
+                </div>
+
+                <b>5</b>
+
+            </div>
+
+
+            <div class="stock-item">
+
+                <span>💊</span>
+
+                <div>
+                    <h4>Azithromycin</h4>
+                    <p>Antibiotic</p>
+                </div>
+
+                <b>3</b>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Quick Actions</h2>
+
+        <div class="quick-actions">
+
+            <a href="#" class="action">
+                <span>➕</span>
+                Add Medicine
+            </a>
+
+            <a href="#" class="action">
+                <span>🛒</span>
+                New Sale
+            </a>
+
+            <a href="#" class="action">
+                <span>👤</span>
+                Add Customer
+            </a>
+
+            <a href="#" class="action">
+                <span>📄</span>
+                View Reports
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>
