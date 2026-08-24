@@ -154,7 +154,7 @@ else {
     <div class="right">
 
         <form
-            action="login.php"
+            action=""
             method="POST"
             onsubmit="return validate(this);"
             novalidate
@@ -197,6 +197,13 @@ else {
             <button type="submit">
                 Login
             </button>
+
+
+            <p>
+                <a href="forgot.php">
+                    Forgot Password?
+                </a>
+            </p>
 
 
             <p>
