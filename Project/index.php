@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <meta charset="UTF-8">
-
     <title>Pharmacy Management System</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -20,19 +16,13 @@
     </div>
 
     <nav>
-
         <a href="#home">Home</a>
-
         <a href="#about">About</a>
-
         <a href="#features">Features</a>
-
         <a href="#contact">Contact</a>
 
-        <a href="login.php" class="btn login-btn">Login</a>
-
-        <a href="signup.php" class="btn signup-btn">Sign Up</a>
-
+        <a href="login.php" class="login-btn">Login</a>
+        <a href="signup.php" class="signup-btn">Sign Up</a>
     </nav>
 
 </header>
@@ -52,9 +42,7 @@
             inventory, suppliers, customers, billing and reports.
         </p>
 
-        <a href="login.php" class="start-btn">
-            Get Started
-        </a>
+        <a href="home.php" class="start-btn">Get Started</a>
 
     </div>
 
@@ -81,80 +69,39 @@
     <div class="feature-container">
 
         <div class="card">
-
             <span>💊</span>
-
             <h3>Medicine Management</h3>
-
-            <p>
-                Add, Update, Delete and Search Medicines.
-            </p>
-
+            <p>Add, Update, Delete and Search Medicines.</p>
         </div>
 
-
         <div class="card">
-
             <span>🛒</span>
-
             <h3>Sales</h3>
-
-            <p>
-                Generate invoices and manage sales.
-            </p>
-
+            <p>Generate invoices and manage sales.</p>
         </div>
 
-
         <div class="card">
-
             <span>🚚</span>
-
             <h3>Suppliers</h3>
-
-            <p>
-                Maintain supplier information.
-            </p>
-
+            <p>Maintain supplier information.</p>
         </div>
 
-
         <div class="card">
-
             <span>📦</span>
-
             <h3>Inventory</h3>
-
-            <p>
-                Monitor medicine stock.
-            </p>
-
+            <p>Monitor medicine stock.</p>
         </div>
 
-
         <div class="card">
-
             <span>📊</span>
-
             <h3>Reports</h3>
-
-            <p>
-                View daily and monthly reports.
-            </p>
-
+            <p>View daily and monthly reports.</p>
         </div>
 
-
         <div class="card">
-
             <span>🔐</span>
-
             <h3>Secure Login</h3>
-
-            <p>
-                Protected admin access using secure login.
-            </p>
-
+            <p>Protected admin access using secure login.</p>
         </div>
 
     </div>
@@ -165,38 +112,23 @@
 <section class="stats">
 
     <div class="stat-box">
-
         <h2>1000+</h2>
-
         <p>Medicines</p>
-
     </div>
 
-
     <div class="stat-box">
-
         <h2>500+</h2>
-
         <p>Customers</p>
-
     </div>
 
-
     <div class="stat-box">
-
         <h2>100+</h2>
-
         <p>Suppliers</p>
-
     </div>
 
-
     <div class="stat-box">
-
         <h2>24/7</h2>
-
         <p>Support</p>
-
     </div>
 
 </section>
@@ -207,7 +139,6 @@
     <h2>Contact Us</h2>
 
     <p>Email: pharmacy@gmail.com</p>
-
     <p>Phone: +880 1739034602</p>
 
 </section>
@@ -222,5 +153,4 @@
 </footer>
 
 </body>
-
 </html>
