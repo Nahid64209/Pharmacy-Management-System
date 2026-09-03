@@ -1,17 +1,8 @@
-let cartCount = 0;
+let searchBox = document.getElementById("searchMedicine");
 
-function addToCart() {
+if (searchBox) {
 
-    cartCount++;
-
-    document.getElementById("cartCount").innerText = cartCount;
-
-    alert("Medicine added to cart!");
-
-}
-
-
-document.getElementById("searchMedicine").addEventListener("keyup", function () {
+searchBox.addEventListener("keyup", function () {
 
     let searchValue = this.value.toLowerCase();
 
@@ -19,8 +10,7 @@ document.getElementById("searchMedicine").addEventListener("keyup", function () 
 
     medicines.forEach(function (medicine) {
 
-        let medicineName =
-            medicine.querySelector("h3").innerText.toLowerCase();
+        let medicineName = medicine.querySelector("h3").innerText.toLowerCase();
 
         if (medicineName.includes(searchValue)) {
 
@@ -35,3 +25,5 @@ document.getElementById("searchMedicine").addEventListener("keyup", function () 
     });
 
 });
+
+}

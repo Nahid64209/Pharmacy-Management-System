@@ -11,3 +11,27 @@ function validateSignup(form) {
 
 	return true;
 }
+
+function signup() {
+	let email = document.getElementById("email").value;
+	let xhr = new XMLHttpRequest();
+
+	xhr.open("POST", "../controllers/userEmailCheck.php", true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.onload = function() {
+		document.getElementById("emailError").innerHTML = xhr.responseText;
+	};
+	xhr.send("email=" + email);
+}
+
+function signupu() {
+	let username = document.getElementById("username").value;
+	let xhr = new XMLHttpRequest();
+
+	xhr.open("POST", "../controllers/usernameCheck.php", true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.onload = function() {
+		document.getElementById("usernameError").innerHTML = xhr.responseText;
+	};
+	xhr.send("username=" + username);
+}
