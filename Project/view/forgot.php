@@ -1,5 +1,6 @@
 <?php
 session_start();
+require '../controllers/userUpdate.php';
 
 $errorMessage = "";
 
@@ -11,17 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 	if (empty($username) || empty($newPassword) || empty($confirmPassword)) {
 		$errorMessage = "Please fill up all fields properly";
 	}
-	elseif (!isset($_SESSION['registeredEmail']) || $username !== $_SESSION['registeredEmail']) {
-		$errorMessage = "Username does not match any registered account";
-	}
-	elseif ($newPassword !== $confirmPassword) {
-		$errorMessage = "Passwords do not match";
-	}
 	else {
-		$_SESSION['registeredPassword'] = $newPassword;
-		$_SESSION['email'] = $username;
-		header("Location: login.php");
-		exit();
+		$errorMessage = updateUserPassword($username, $newPassword, $confirmPassword);
+		if ($errorMessage === "") {
+			$_SESSION['rememberUser'] = $username;
+			header("Location: login.php");
+			exit();
+		}
 	}
 }
 ?>
@@ -31,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 <head>
 	<meta charset="UTF-8">
 	<title>Forgot Password</title>
-	<link rel="stylesheet" href="css/forgot.css">
+	<link rel="stylesheet" href="../css/forgot.css">
 </head>
 
 <body>
@@ -51,17 +48,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 			<div class="input-box">
 				<span>👤</span>
-				<input type="text" name="username" placeholder="Username" required>
+				<input type="text" name="username" placeholder="Username" >
 			</div>
 
 			<div class="input-box">
 				<span>🔒</span>
-				<input type="password" name="newPassword" placeholder="New Password" required>
+				<input type="password" name="newPassword" placeholder="New Password" >
 			</div>
 
 			<div class="input-box">
 				<span>🔒</span>
-				<input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+				<input type="password" name="confirmPassword" placeholder="Confirm Password">
 			</div>
 
 			<button type="submit">Reset Password</button>

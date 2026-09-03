@@ -1,34 +1,16 @@
 <?php
+require '../models/cart.php';
+require '../models/payment.php';
 session_start();
+
 if (!isset($_SESSION['loggedIn'])) {
     header("Location: login.php");
     exit();
 }
 
-$_SESSION['paymentErrMsg'] = "";
-$_SESSION['paymentSuccessMsg'] = "";
-
-if ($_SERVER['REQUEST_METHOD'] === "POST") {
-    $customer = isset($_POST['customer']) ? trim($_POST['customer']) : "";
-    $invoice = isset($_POST['invoice']) ? trim($_POST['invoice']) : "";
-    $amount = isset($_POST['amount']) ? trim($_POST['amount']) : "";
-    $method = isset($_POST['method']) ? $_POST['method'] : "";
-    $phone = isset($_POST['phone']) ? trim($_POST['phone']) : "";
-    $flag = true;
-
-    if (empty($customer) || empty($invoice) || empty($amount) || empty($phone)) {
-        $flag = false;
-        $_SESSION['paymentErrMsg'] = "Please fill up all fields properly";
-    }
-    elseif ($method === "") {
-        $flag = false;
-        $_SESSION['paymentErrMsg'] = "Please select a payment method";
-    }
-
-    if ($flag) {
-        $_SESSION['paymentSuccessMsg'] = "Payment completed successfully";
-    }
-}
+$customer = isset($_COOKIE['signup_name']) ? $_COOKIE['signup_name'] : "User";
+$amount = getCartTotal($_SESSION['rememberUser']);
+$invoice = getInvoice();
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     <title>Payment | Pharmacy Management System</title>
 
-    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="../css/payment.css">
 
 </head>
 
@@ -52,19 +34,19 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         <p>Complete your payment</p>
 
 
-        <form action="" method="POST" onsubmit="return validatePayment(this);" novalidate>
+        <form action="../controllers/userPayment.php" method="POST" onsubmit="return validatePayment(this);" novalidate>
 
             <label>Customer Name</label>
-            <input type="text" name="customer" placeholder="Enter customer name">
+            <input type="text" name="customer" value="<?php echo htmlspecialchars($customer); ?>" readonly>
 <br><br>
 
             <label>Invoice Number</label>
-            <input type="text" name="invoice" placeholder="Enter invoice number">
+            <input type="text" name="invoice" value="<?php echo $invoice; ?>" readonly>
             <br><br>
 
 
             <label>Total Amount</label>
-            <input type="text" name="amount" placeholder="Enter amount">
+            <input type="text" name="amount" value="<?php echo $amount; ?>" readonly>
             <br><br>
 
 
@@ -105,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     </div>
 
-<script src="js/payment.js"></script>
+<script src="../js/payment.js"></script>
 
 </body>
 
